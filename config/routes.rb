@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'reviews/create'
+  get 'reviews/destroy'
   get 'products/index'
   get 'products/new'
   get 'products/create'
