@@ -42,7 +42,7 @@ Product.create(
   description: 'Shampoo Hipoalergénico de Romero y Aceite Esencial Melissa para Perros y Gatos - 100% Natural - Limpieza y Cuidado Integral para tu Mascota - 350ml',
   quantity: 10,
   price: 159.99,
-  user_id: User.1
+  user_id: 1
 )
 
 Product.create(
@@ -50,7 +50,7 @@ Product.create(
   description:
   quantity:
   price:
-  user_id: User.3
+  user_id: 3
 )
 
 Product.create(
@@ -58,7 +58,7 @@ Product.create(
   description:
   quantity:
   price:
-  user_id: User.1
+  user_id: 1
 )
 
 Product.create(
@@ -66,14 +66,7 @@ Product.create(
   description:
   quantity:
   price:
-  user_id: User.3
-)
-Product.create(
-  title:
-  description:
-  quantity:
-  price:
-  user_id: User.1
+  user_id: 3
 )
 
 Product.create(
@@ -81,7 +74,7 @@ Product.create(
   description:
   quantity:
   price:
-  user_id: User.3
+  user_id: 1
 )
 
 Product.create(
@@ -89,7 +82,7 @@ Product.create(
   description:
   quantity:
   price:
-  user_id: User.1
+  user_id: 3
 )
 
 Product.create(
@@ -97,7 +90,7 @@ Product.create(
   description:
   quantity:
   price:
-  user_id: User.3
+  user_id: 1
 )
 
 Product.create(
@@ -105,7 +98,7 @@ Product.create(
   description:
   quantity:
   price:
-  user_id: User.1
+  user_id: 3
 )
 
 Product.create(
@@ -113,5 +106,29 @@ Product.create(
   description:
   quantity:
   price:
-  user_id: User.3
+  user_id: 1
+)
+
+Product.create(
+  title:
+  description:
+  quantity:
+  price:
+  user_id: 3
+)
+
+Product.create(
+  title:
+  description:
+  quantity:
+  price:
+  user_id: 1
+)
+
+Product.create(
+  title:
+  description:
+  quantity:
+  price:
+  user_id: 3
 )
