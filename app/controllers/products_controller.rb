@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: [:show, :destroy]
+
   def index
+    @products = Products.all
   end
 
   def new
@@ -9,6 +12,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @review = Review.new(product: @product)
   end
 
   def edit
@@ -18,5 +22,15 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def set_product
+    @product = Product.find(params[:id])
+  end
+
+  def product_params
+    params.require(:list).permit(:name, :photo)
   end
 end
