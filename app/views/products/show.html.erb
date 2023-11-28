@@ -1,5 +1,5 @@
 <div class="position-relative">
-  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @product.photo.attached? ? cl_image_path(@product.photo.key) : asset_path('product_background.jpg') %>)">
+  <div>
     <h1><%= @product.title %></h1>
   </div>
 </div>
@@ -38,7 +38,7 @@
       <% end %>
       <% @product.reviews.each do |review| %>
         <div>
-          <% review.rating.times do %>
+          <%= review.rating.times do %>
             <i class="fas fa-star star-yellow"></i>
           <% end %>
           <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>

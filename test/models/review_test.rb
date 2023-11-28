@@ -4,7 +4,7 @@
 #
 #  id         :bigint           not null, primary key
 #  comment    :text
-#  rating     :decimal(, )
+#  rating     :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  product_id :bigint           not null
