@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :products do
     resources :reviews, only: :create
+    resources :orders, only: :index
   end
   resources :reviews, only: :destroy
+
+  resources :orders, only: [:create, :show, :index]
 end
