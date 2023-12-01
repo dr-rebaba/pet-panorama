@@ -1,0 +1,64 @@
+<div class="container mt-3 position-relative">
+  <div class="row">
+    <div class="col-12">
+       <h1 class="title-card">
+        Find the pet product you want
+        <i class="fas fa-heart" style="font-size: 25px"></i>
+      </h1>
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <% if @query %>
+        <p>You searched for <strong><%= @query %></strong>. We found <%= @products.count %> products out of our <%= Product.count %> on our website.</p>
+      <% else %>
+        <p>All <%= Product.count %> products.</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-md-auto border mx-3 my-3">
+        <div>
+          <div>
+            <div class="d-flex justify-content-center mt-3">
+              <h4 ><%= product.title %></h4>
+            </div>
+            <div class="d-flex justify-content-center ms-3">
+              <%= cl_image_tag product.photo.key, :size => "200x200" %>
+            </div>
+            <div class="d-flex justify-content-center">
+              <p><%= product.description %></p>
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="d-flex pe-4 align-items-center">
+                <h6 class="me-2 mb-0">Quantity:</h6>
+                <span><%= product.quantity %></span>
+              </div>
+              <div class="d-flex align-items-center">
+                <h6 class="me-2 mb-0">Price:</h6>
+                <i class="fa-solid fa-dollar-sign"></i>
+                <span><%= product.price %></span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mb-3">
+            <%= link_to "More info", product_path(product), class: "btn btn-primary rounded" %>
+            <%= link_to "Edit", edit_product_path(product), class: "btn btn-secondary text-light rounded" %>
+            <%= link_to "Remove", product_path(product),
+                data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+                class: "btn btn-danger text-light rounded"
+            %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
