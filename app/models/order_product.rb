@@ -21,7 +21,7 @@
 #  fk_rails_...  (product_id => products.id)
 #
 class OrderProduct < ApplicationRecord
-  belongs_to :product
+  has_many :products
   belongs_to :order
 
   validates :quantity, :price, presence: true

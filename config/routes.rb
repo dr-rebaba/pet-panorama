@@ -19,9 +19,12 @@ Rails.application.routes.draw do
   get 'products/update'
   get 'products/destroy'
 
-  get 'orders/index'
-  get 'orders/create'
-  get 'orders/show'
+  # get 'orders/index'
+  # post 'orders/create'
+  # get 'orders/show'
+  # get 'orders/:id/edit'
+  # patch 'orders/:id'
+  # delete 'orders/:id'
 
   devise_for :users
   root to: "pages#home"
@@ -31,9 +34,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :products do
     resources :reviews, only: :create
-    resources :orders, only: :index
   end
   resources :reviews, only: :destroy
-
-  resources :orders, only: [:create, :show, :index]
+  resources :orders
 end

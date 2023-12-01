@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     if @order.save
-      redirect_to @order, notice: 'Order was successfully created.'
+      redirect_to @order, notice: 'Order successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
