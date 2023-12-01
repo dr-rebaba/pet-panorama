@@ -19,13 +19,6 @@ Rails.application.routes.draw do
   get 'products/update'
   get 'products/destroy'
 
-  # get 'orders/index'
-  # post 'orders/create'
-  # get 'orders/show'
-  # get 'orders/:id/edit'
-  # patch 'orders/:id'
-  # delete 'orders/:id'
-
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
