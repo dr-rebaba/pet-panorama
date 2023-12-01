@@ -18,7 +18,8 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Order < ApplicationRecord
-  has_many :order_products, dependent: :destroy
+  # has_many :order_products, dependent: :destroy
+  has_many :products, through: :order_products
   belongs_to :user
 
   validates :status, :date, presence: true
