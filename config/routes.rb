@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   get 'users/create'
   get 'users/edit'
   get 'users/update'
-  get 'users/destroy'
+
   get 'reviews/create'
   get 'reviews/destroy'
+
   get 'products/index'
   get 'products/new'
   get 'products/create'
@@ -25,9 +26,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :products do
     resources :reviews, only: :create
-    resources :orders, only: :index
   end
   resources :reviews, only: :destroy
-
-  resources :orders, only: [:create, :show, :index]
+  resources :orders
 end
