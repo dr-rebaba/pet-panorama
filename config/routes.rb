@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'cart/show'
+  get 'cart/add_item'
+  get 'cart/remove_item'
 
   get 'users/index'
   get 'users/show'
@@ -7,8 +10,10 @@ Rails.application.routes.draw do
   get 'users/edit'
   get 'users/update'
   get 'users/destroy'
+  
   get 'reviews/create'
   get 'reviews/destroy'
+
   get 'products/index'
   get 'products/new'
   get 'products/create'
