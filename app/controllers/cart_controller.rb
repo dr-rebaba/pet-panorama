@@ -21,5 +21,4 @@ class CartController < ApplicationController
     @cart = current_user.cart
     @card_product.cart = @cart
   end
-
 end
