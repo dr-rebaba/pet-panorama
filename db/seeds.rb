@@ -43,12 +43,12 @@ user3.save
 puts "El usuario #{user3.name} se a creado correctamente"
 # Products
 
-product1 = Product.create(
+product1 = Product.create!(
   title: 'Go Care Pet Shampoo',
   description: 'Shampoo Hipoalergénico de Romero y Aceite Esencial Melissa para Perros y Gatos - 100% Natural - Limpieza y Cuidado Integral para tu Mascota - 350ml',
   quantity: 10,
   price: 159.99,
-  user_id: user1,
+  user: user1,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534961/Go_Care_PETShampoo_nhgrlj.jpg")
@@ -61,7 +61,7 @@ product2 = Product.create(
   description: 'Alfombrilla de viaje plegable para perro es plegable y viene con una bolsa separada para portabilidad y fácil almacenamiento, por lo que es una opción ideal para viajes, senderismo, camping, picnics y otras actividades al aire libre',
   quantity: 8,
   price: 559.44,
-  user_id: user3,
+  user: user3,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534930/furhaven_dog_bed_ruil6k.jpg")
@@ -74,7 +74,7 @@ product3 = Product.create(
   description: 'Juguete para Masticar, Juguete para Perros Molar de Goma Duradero, Utilizado para Jugar, Limpiar Los Dientes, Juego de Juguetes para Perros, Juguete Interactivo para Perros, Adecuado para Juguetes para Masticar Perros Pequeños, Medianos y Grandes',
   quantity: 20,
   price: 365.03,
-  user_id: user1,
+  user: user1,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534929/juguetes_para_perro_12_piezas_lxttuy.jpg")
@@ -87,7 +87,7 @@ product4 = Product.create(
   description: 'Limpiar y Afilar Los Dientes De Las Mascotas, ZZBIFRJ Juguetes para Perro Resistentes a Los Mordiscos Adecuados para El Adiestramiento De Perros Pequeños y Grandes',
   quantity: 15,
   price: 159,
-  user_id: user3,
+  user: user3,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534929/Pelotas_De_Goma_para_Mascotas_3_Pack_morc4u.jpg")
@@ -100,7 +100,7 @@ product5 = Product.create(
   description: 'Alimento Húmedo para Gato Adulto con Sabor a Soufflé Parrillada Mixta, 85 gr x 24 uds, Morado',
   quantity: 50,
   price: 250.80,
-  user_id: user1,
+  user: user1,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534929/Whiskas_lbwuhu.jpg")
@@ -113,7 +113,7 @@ product6 = Product.create(
   description: 'Bola de Gato Interactiva Inteligente, 360 Grados Autogiratoria Juguete para Gatos, con Type C Recargable y Carcasa de Silicona Suave (Verde)',
   quantity: 15,
   price: 169,
-  user_id: user3,
+  user: user3,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534928/YOMYM_Juguetes_para_Gatos_xfh2y5.jpg")
@@ -126,7 +126,7 @@ product7 = Product.create(
   description: 'Una herramienta eficaz para el entrenamiento de comportamiento y un espacio personal para tu perro',
   quantity: 5,
   price: 835.32,
-  user_id: user1,
+  user: user1,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534928/New_World_-_Caja_plegable_de_metal_para_perros_fyulzl.jpg")
@@ -139,7 +139,7 @@ product8 = Product.create(
   description: 'Bolsa Transporte Transpirable para Mascotas, Portador de Viaje con Correa de Hombro Ajustable, Transporte de Gato con Colchón Suave+Tazón-Color Negro-Talla S',
   quantity: 2,
   price: 729,
-  user_id: user3,
+  user: user3,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534928/AFujia_Transport%C3%ADn_Perro_Gato_ve3nxk.jpg")
@@ -152,7 +152,7 @@ product9 = Product.create(
   description: 'Piedra de calcio para moler pico de loro, con campanas, accesorios de jaula para pájaros, juguetes de jaula para cacatúa, periquitos, rata, hámster, chinchilla, conejo, gris africano',
   quantity: 30,
   price: 384.10,
-  user_id: user1,
+  user: user1,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534928/AFujia_Transport%C3%ADn_Perro_Gato_ve3nxk.jpg")
@@ -165,7 +165,7 @@ product10 = Product.create(
   description: 'Duradera y antideslizante de 4.4 pies, cómoda cuerda fuerte, correa antideslizante para perros grandes, medianos y pequeños, correa de entrenamiento para mascotas sin tirones, color rojo',
   quantity: 20,
   price: 299.99,
-  user_id: user3,
+  user: user3,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534927/Correa_para_perro_tncuqp.jpg")
@@ -178,7 +178,7 @@ product11 = Product.create(
   description: 'El Foam de Limpieza en Seco del Gato Consentido es el producto ideal para la higiene diaria de tu gato. Sin necesidad de mojar a tu gato lograrás mantener su pelaje limpio, brillante y sedoso. Además, previene la aparición de plagas indeseadas como pulgas, garrapatas y piojos. Su fórmula no tóxica, disuelve la mugre del pelo y piel sin afectarles, dejando un suave y agradable aroma.',
   quantity: 12,
   price: 84.69,
-  user_id: user1,
+  user: user1,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701535403/Foam_de_limpieza_en_seco_Gato_Consentido_150ml_po7lmy.jpg")
@@ -191,7 +191,7 @@ product12 = Product.create(
   description: 'Nuestro protector de sofá contra arañazos de gatos se puede usar en cualquier lugar donde su gato pueda arañar. Este fuerte protector contra arañazos no solo es adecuado para sofás, sino también para cortinas, puertas, mesas, pisos y más. El protector de sofá para arañazos de gatos le sirve no solo para gatos, sino también a otras mascotas como los perros.',
   quantity: 4,
   price: 219.99,
-  user_id: user3,
+  user: user3,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701535436/10_PCS_Paquete_de_Rascadores_para_Gatos_jumh9l.jpg")
