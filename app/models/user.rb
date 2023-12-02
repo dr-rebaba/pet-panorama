@@ -27,6 +27,7 @@ class User < ApplicationRecord
   has_many :orders, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_one_attached :photo
   # validates :name, :last_name, :phone_number, presence: true
   # after_initialize :set_cart, if: :new_record?
 
