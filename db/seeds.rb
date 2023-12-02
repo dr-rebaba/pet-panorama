@@ -91,7 +91,7 @@ Product.create(
   quantity: 15,
   price: 169,
   user_id: 3,
-  photo: ''https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534928/YOMYM_Juguetes_para_Gatos_xfh2y5.jpg''
+  photo: 'https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534928/YOMYM_Juguetes_para_Gatos_xfh2y5.jpg'
 )
 
 Product.create(
