@@ -46,7 +46,7 @@ Product.create(
   quantity: 10,
   price: 159.99,
   user_id: 1,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/d7a832677fde8c40f04d0c2c4afb2da9'
 )
 
 Product.create(
@@ -55,7 +55,7 @@ Product.create(
   quantity: 8,
   price: 559.44,
   user_id: 3,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/522a1a08de2bf6107e9c41879b56b298'
 )
 
 Product.create(
@@ -64,7 +64,7 @@ Product.create(
   quantity: 20,
   price: 365.03,
   user_id: 1,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/6b1a9fc2fbbf31b0146fc7646b34e1c2'
 )
 
 Product.create(
@@ -73,7 +73,7 @@ Product.create(
   quantity: 15,
   price: 159,
   user_id: 3,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/844a66d9c6ffa5f37a9cb3eae0a15991'
 )
 
 Product.create(
@@ -82,7 +82,7 @@ Product.create(
   quantity: 50,
   price: 250.80,
   user_id: 1,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/b07a688ff75b0786bc3ae8f70ef2d75d'
 )
 
 Product.create(
@@ -91,7 +91,7 @@ Product.create(
   quantity: 15,
   price: 169,
   user_id: 3,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/4fcf77a2f2c0e0cdeeece319b2047f0a'
 )
 
 Product.create(
@@ -100,7 +100,7 @@ Product.create(
   quantity: 5,
   price: 835.32,
   user_id: 1,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/71be1a9372114d0c8718210b787df40e'
 )
 
 Product.create(
@@ -109,7 +109,7 @@ Product.create(
   quantity: 2,
   price: 729,
   user_id: 3,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/9d4941dbb0805d751dbe9dbe9ed6af96'
 )
 
 Product.create(
@@ -118,7 +118,7 @@ Product.create(
   quantity: 30,
   price: 384.10,
   user_id: 1,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/373cdc23c4a6b5e4b74cee93ea65cff0'
 )
 
 Product.create(
@@ -127,7 +127,7 @@ Product.create(
   quantity: 20,
   price: 299.99,
   user_id: 3,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/31dd08380f32681b5ea6854d07e0c8cb'
 )
 
 Product.create(
@@ -136,7 +136,7 @@ Product.create(
   quantity: 12,
   price: 84.69,
   user_id: 1,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/b2b5456b0fc8d68f105d57e53e08f963'
 )
 
 Product.create(
@@ -145,7 +145,7 @@ Product.create(
   quantity: 4,
   price: 219.99,
   user_id: 3,
-  photo: cloudinary_upload['secure_url']
+  photo: 'https://asset.cloudinary.com/dyx9c9mym/06f83d31010871fa028387df79e4046f'
 )
 
 # Orders
