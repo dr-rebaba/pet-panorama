@@ -28,9 +28,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   # validates :name, :last_name, :phone_number, presence: true
-  after_initialize :set_cart, if: :new_record?
+  # after_initialize :set_cart, if: :new_record?
 
-  def set_cart
-    self.cart = Cart.new
-  end
+  # def set_cart
+  #   self.cart = Cart.new
+  # end
 end
