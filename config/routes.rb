@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'cart/show'
+  get 'cart/add_item'
+  get 'cart/remove_item'
 
   get 'users/index'
   get 'users/show'
@@ -6,8 +9,6 @@ Rails.application.routes.draw do
   get 'users/create'
   get 'users/edit'
   get 'users/update'
-  get 'users/destroy'
-
   get 'reviews/create'
   get 'reviews/destroy'
 
@@ -30,4 +31,9 @@ Rails.application.routes.draw do
   end
   resources :reviews, only: :destroy
   resources :orders
+
+  resource :cart, only: [:show] do
+    post 'add_item/:product_id', to: 'carts#add_item', as: :add_item
+    delete 'remove_item/:product_id', to: 'carts#remove_item', as: :remove_item
+  end
 end
