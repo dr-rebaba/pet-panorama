@@ -113,12 +113,7 @@ product6 = Product.create(
   description: 'Bola de Gato Interactiva Inteligente, 360 Grados Autogiratoria Juguete para Gatos, con Type C Recargable y Carcasa de Silicona Suave (Verde)',
   quantity: 15,
   price: 169,
-<<<<<<< HEAD
-  user_id: 3,
-  photo: 'https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534928/YOMYM_Juguetes_para_Gatos_xfh2y5.jpg'
-=======
   user: user3,
->>>>>>> f914d6c9d3aef59c03f591d2e2078ce48a45ad13
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534928/YOMYM_Juguetes_para_Gatos_xfh2y5.jpg")
