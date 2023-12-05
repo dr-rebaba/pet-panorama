@@ -11,3 +11,18 @@
   background-color: #0056b3;
 
 }
+
+.card-hover:hover {
+  transform: scale(1.05);
+
+  transition: transform 0.3s ease-in-out;
+
+}
+
+
+.card-hover:not(:hover) {
+  transform: scale(1);
+
+  transition: transform 0.3s ease-in-out;
+  
+}
