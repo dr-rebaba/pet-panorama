@@ -1,11 +1,7 @@
 .product-image {
   width: 100%;
-  /* Ajusta el ancho al de su contenedor */
   height: auto;
-  /* Mantiene la proporción de la imagen */
   object-fit: cover;
-  /* Cubre el área asignada sin distorsión */
   object-position: center;
-  /* Centra la imagen */
   margin-bottom: 20px;
 }
