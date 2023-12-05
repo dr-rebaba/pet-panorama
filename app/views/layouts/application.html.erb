@@ -17,9 +17,10 @@
   <body>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-
-    <%= yield %>
+      <div class="app-body">
+        <%= yield %>
     <!-- app/views/layouts/application.html.erb -->
-   <%= render "shared/footer" %>
+        <%= render "shared/footer" %>
+      </div>
   </body>
 </html>
