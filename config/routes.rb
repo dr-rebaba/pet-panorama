@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get 'products/update'
   get 'products/destroy'
 
+  get 'profile', to: 'users#show', as: 'user_profile'
+
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -25,6 +27,7 @@ Rails.application.routes.draw do
   resources :products do
     resources :reviews, only: :create
   end
+  resources :users
   resources :reviews, only: :destroy
 
   resource :cart, only: [:show]
