@@ -1,0 +1,17 @@
+.btn-more-info {
+  background-color: #ff0000;
+  /* Cambia esto por el color que prefieras */
+  color: white;
+  /* Color del texto, ajusta según necesites */
+  width: 100%;
+  /* Hace que el botón se extienda por todo el ancho de la tarjeta */
+  border: none;
+  /* Opcional: elimina el borde si lo deseas */
+  padding: 10px 0;
+  /* Ajusta el relleno para cambiar la altura del botón */
+}
+
+.more-info-btn:hover {
+  background-color: #0056b3;
+  /* Cambia esto por el color al pasar el mouse (hover) */
+}
