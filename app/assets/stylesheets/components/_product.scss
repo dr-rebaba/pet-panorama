@@ -1,0 +1,17 @@
+.product-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 20px;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-hover:not(:hover) {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}

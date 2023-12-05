@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'cart/show'
-  get 'cart/add_item'
-  get 'cart/remove_item'
-
   get 'users/index'
   get 'users/show'
   get 'users/new'
@@ -20,6 +16,8 @@ Rails.application.routes.draw do
   get 'products/update'
   get 'products/destroy'
 
+  get 'profile', to: 'users#show', as: 'user_profile'
+
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -29,11 +27,12 @@ Rails.application.routes.draw do
   resources :products do
     resources :reviews, only: :create
   end
+  resources :users
   resources :reviews, only: :destroy
-  resources :orders
 
-  resource :cart, only: [:show] do
-    post 'add_item/:product_id', to: 'carts#add_item', as: :add_item
-    delete 'remove_item/:product_id', to: 'carts#remove_item', as: :remove_item
-  end
+  resource :cart, only: [:show]
+  resources :cart_products, only: [:create, :destroy]
+
+  resources :orders, only: [:index, :create, :show]
+  resources :order_products, only: [:create, :destroy]
 end
