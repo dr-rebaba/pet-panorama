@@ -18,6 +18,16 @@
 
 .navbar-brand {
   padding: 0;
-  width: 200px;
+  width: 160px;
   height: auto;
+}
+
+.navbar-lewagon .navbar-brand .img-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand .img-hover:not(:hover) {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
 }
