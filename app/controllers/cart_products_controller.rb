@@ -25,11 +25,10 @@ class CartProductsController < ApplicationController
 
     if new_quantity.positive?
       @cart_product.update(quantity: new_quantity)
-      redirect_to cart_path
     else
       @cart_product.destroy
-      redirect_to cart_path
     end
+    redirect_to cart_path
   end
 
   def destroy

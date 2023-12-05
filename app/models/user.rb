@@ -29,9 +29,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one_attached :photo
   # validates :name, :last_name, :phone_number, presence: true
-  # after_initialize :set_cart, if: :new_record?
 
-  # def set_cart
-  #   self.cart = Cart.new
-  # end
+  def create_cart
+    self.cart = Cart.new
+  end
 end
