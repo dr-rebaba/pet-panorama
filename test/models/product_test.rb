@@ -4,7 +4,7 @@
 #
 #  id          :bigint           not null, primary key
 #  description :text
-#  price       :decimal(, )
+#  price       :float
 #  quantity    :integer
 #  title       :string
 #  created_at  :datetime         not null
