@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <div class="container-fluid shadow p-2 mb-2 bg-white rounded">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag asset_path("pet_panorama_logo4.png"), alt: "Logo", class: "img-fluid" %>
+      <%= image_tag asset_path("pet_panorama_logo6.png"), alt: "Logo", class: "img-fluid" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,7 @@
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to link_to "Perfil de usuario", "#", class: "dropdown-item" %>
+              <%= link_to link_to "Perfil de usuario", user_profile_path, class: "dropdown-item" %>
               <%= link_to "Log out",  destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
