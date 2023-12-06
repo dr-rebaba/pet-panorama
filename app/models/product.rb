@@ -28,6 +28,6 @@ class Product < ApplicationRecord
 
   has_one_attached :photo
   validates :title, uniqueness: true, presence: true
-  validates :description, :quantity, :price, presence: true
+  validates :description, :quantity, :price, :photo, presence: true
   validates :description, length: {minimum: 6}
 end
