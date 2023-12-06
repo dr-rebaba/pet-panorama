@@ -43,7 +43,7 @@ user3.save
 puts "El usuario #{user3.name} se a creado correctamente"
 # Products
 
-product1 = Product.create!(
+product1 = Product.new(
   title: 'Go Care Pet Shampoo',
   description: 'Shampoo Hipoalergénico de Romero y Aceite Esencial Melissa para Perros y Gatos - 100% Natural - Limpieza y Cuidado Integral para tu Mascota - 350ml',
   quantity: 10,
@@ -56,7 +56,7 @@ product1.photo.attach(io: file, filename: "shampoo.png", content_type: "image/pn
 product1.save
 puts "El producto #{product1.title} se a creado correctamente"
 
-product2 = Product.create(
+product2 = Product.new(
   title: 'Furhaven Large Dog Bed Trail Pup Travel',
   description: 'Alfombrilla de viaje plegable para perro es plegable y viene con una bolsa separada para portabilidad y fácil almacenamiento, por lo que es una opción ideal para viajes, senderismo, camping, picnics y otras actividades al aire libre',
   quantity: 8,
@@ -69,7 +69,7 @@ product2.photo.attach(io: file, filename: "bed.png", content_type: "image/png")
 product2.save
 puts "El producto #{product2.title} se a creado correctamente"
 
-product3 = Product.create(
+product3 = Product.new(
   title: 'Juguetes para perro, 12 piezas',
   description: 'Juguete para Masticar, Juguete para Perros Molar de Goma Duradero, Utilizado para Jugar, Limpiar Los Dientes, Juego de Juguetes para Perros, Juguete Interactivo para Perros, Adecuado para Juguetes para Masticar Perros Pequeños, Medianos y Grandes',
   quantity: 20,
@@ -82,7 +82,7 @@ product3.photo.attach(io: file, filename: "juguete.png", content_type: "image/pn
 product3.save
 puts "El producto #{product3.title} se a creado correctamente"
 
-product4 = Product.create(
+product4 = Product.new(
   title: 'Pelotas De Goma para Mascotas 3 Pack',
   description: 'Limpiar y Afilar Los Dientes De Las Mascotas, ZZBIFRJ Juguetes para Perro Resistentes a Los Mordiscos Adecuados para El Adiestramiento De Perros Pequeños y Grandes',
   quantity: 15,
@@ -95,7 +95,7 @@ product4.photo.attach(io: file, filename: "pelota.png", content_type: "image/png
 product4.save
 puts "El producto #{product4.title} se a creado correctamente"
 
-product5 = Product.create(
+product5 = Product.new(
   title: 'Whiskas',
   description: 'Alimento Húmedo para Gato Adulto con Sabor a Soufflé Parrillada Mixta, 85 gr x 24 uds, Morado',
   quantity: 50,
@@ -108,7 +108,7 @@ product5.photo.attach(io: file, filename: "wiskas.png", content_type: "image/png
 product5.save
 puts "El producto #{product5.title} se a creado correctamente"
 
-product6 = Product.create(
+product6 = Product.new(
   title: 'YOMYM Juguetes para Gatos',
   description: 'Bola de Gato Interactiva Inteligente, 360 Grados Autogiratoria Juguete para Gatos, con Type C Recargable y Carcasa de Silicona Suave (Verde)',
   quantity: 15,
@@ -121,7 +121,7 @@ product6.photo.attach(io: file, filename: "wiskas.png", content_type: "image/png
 product6.save
 puts "El producto #{product6.title} se a creado correctamente"
 
-product7 = Product.create(
+product7 = Product.new(
   title: 'New World - Caja plegable de metal para perros',
   description: 'Una herramienta eficaz para el entrenamiento de comportamiento y un espacio personal para tu perro',
   quantity: 5,
@@ -134,7 +134,7 @@ product7.photo.attach(io: file, filename: "caja_plgable.png", content_type: "ima
 product7.save
 puts "El producto #{product7.title} se a creado correctamente"
 
-product8 = Product.create(
+product8 = Product.new(
   title: 'AFujia Transportín Perro Gato ',
   description: 'Bolsa Transporte Transpirable para Mascotas, Portador de Viaje con Correa de Hombro Ajustable, Transporte de Gato con Colchón Suave+Tazón-Color Negro-Talla S',
   quantity: 2,
@@ -147,7 +147,7 @@ product8.photo.attach(io: file, filename: "bolsa.png", content_type: "image/png"
 product8.save
 puts "El producto #{product8.title} se a creado correctamente"
 
-product9 = Product.create(
+product9 = Product.new(
   title: 'Paquete de 2 juguetes grandes para masticar pájaros',
   description: 'Piedra de calcio para moler pico de loro, con campanas, accesorios de jaula para pájaros, juguetes de jaula para cacatúa, periquitos, rata, hámster, chinchilla, conejo, gris africano',
   quantity: 30,
@@ -160,7 +160,7 @@ product9.photo.attach(io: file, filename: "juguetes2.png", content_type: "image/
 product9.save
 puts "El producto #{product9.title} se a creado correctamente"
 
-product10 = Product.create(
+product10 = Product.new(
   title: 'Correa para perro',
   description: 'Duradera y antideslizante de 4.4 pies, cómoda cuerda fuerte, correa antideslizante para perros grandes, medianos y pequeños, correa de entrenamiento para mascotas sin tirones, color rojo',
   quantity: 20,
@@ -173,7 +173,7 @@ product10.photo.attach(io: file, filename: "correa.png", content_type: "image/pn
 product10.save
 puts "El producto #{product10.title} se a creado correctamente"
 
-product11 = Product.create(
+product11 = Product.new(
   title: 'Foam de limpieza en seco Gato Consentido 150ml',
   description: 'El Foam de Limpieza en Seco del Gato Consentido es el producto ideal para la higiene diaria de tu gato. Sin necesidad de mojar a tu gato lograrás mantener su pelaje limpio, brillante y sedoso. Además, previene la aparición de plagas indeseadas como pulgas, garrapatas y piojos. Su fórmula no tóxica, disuelve la mugre del pelo y piel sin afectarles, dejando un suave y agradable aroma.',
   quantity: 12,
@@ -186,7 +186,7 @@ product11.photo.attach(io: file, filename: "foam.png", content_type: "image/png"
 product11.save
 puts "El producto #{product11.title} se a creado correctamente"
 
-product12 = Product.create(
+product12 = Product.new(
   title: '10 PCS Paquete de Rascadores para Gatos',
   description: 'Nuestro protector de sofá contra arañazos de gatos se puede usar en cualquier lugar donde su gato pueda arañar. Este fuerte protector contra arañazos no solo es adecuado para sofás, sino también para cortinas, puertas, mesas, pisos y más. El protector de sofá para arañazos de gatos le sirve no solo para gatos, sino también a otras mascotas como los perros.',
   quantity: 4,
