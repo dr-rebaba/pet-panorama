@@ -7,7 +7,11 @@
               <h4 ><%= @product.title %></h4>
             </div>
             <div class="d-flex justify-content-start ms-3">
-              <%= cl_image_tag @product.photo.key, class: 'product-image', height: 200, width: 200, crop: :fill  %>
+              <%if @product.photo.attached? %>
+                <%= cl_image_tag @product.photo.key, class: 'product-image', height: 200, width: 200, crop: :fill  %>
+              <%else  %>
+                <%=image_tag "imgnotavailable.png"  %>
+              <%end %>
             </div>
             <div class="d-flex justify-content-start">
               <p class="product-description"><%= @product.description %></p>
