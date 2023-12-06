@@ -109,11 +109,11 @@ product5.save
 puts "El producto #{product5.title} se a creado correctamente"
 
 product6 = Product.new(
-  title: 'YOMYM Juguetes para Gatos',
+  title: 'YOMYM Juguetes para Gatos2',
   description: 'Bola de Gato Interactiva Inteligente, 360 Grados Autogiratoria Juguete para Gatos, con Type C Recargable y Carcasa de Silicona Suave (Verde)',
   quantity: 15,
   price: 169,
-  user: user3,
+  user: User.last,
 )
 
 file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534928/YOMYM_Juguetes_para_Gatos_xfh2y5.jpg")

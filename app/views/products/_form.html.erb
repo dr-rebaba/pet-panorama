@@ -8,7 +8,7 @@
           <%= f.input :description, placeholder: "Add your description here..." %>
           <%= f.input :quantity, placeholder: 1 %>
           <%= f.input :price, placeholder: 1 %>
-          <%= f.input :photo, as: :file %>
+          <%= f.input :photo, as: :file, required: true %>
           <%= f.submit class: 'btn btn-primary' %>
         <% end %>
       </div>
