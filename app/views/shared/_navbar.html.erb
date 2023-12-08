@@ -1,3 +1,4 @@
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <div class="container-fluid shadow p-2 mb-2 bg-white rounded">
     <%= link_to root_path, class: "navbar-brand" do %>
@@ -5,26 +6,24 @@
     <% end %>
 
 
-  <button data-controller="dark-mode" data-action="click->dark-mode#toggleDarkMode">
-    <i class="bi" data-dark-mode-target="icon"></i>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
+
 
   <div class="row justify-content-center">
     <div class="col-sm-8 my-3">
       <%= form_with url: products_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,
               params[:query],
-              class: "form-control",
-              placeholder: "Type a keyword"
+              class: "form-control col-8",
+              placeholder: "Type a product"
           %>
         <%= submit_tag "Search", name: "", class: "btn btn-secondary"  %>
       <% end %>
     </div>
   </div>
 
-  <button onclick="toggleDarkMode()" class="btn rounded-fill">
-    <i id="dl-icon" class="bi bi-moon-stars"></i>
-  </button>
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
