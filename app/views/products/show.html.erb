@@ -31,7 +31,16 @@
       </div>
       <div class="d-flex justify-content-between my-3">
           <div>
-            <%= link_to "Add to cart", "", class: "btn btn-danger text-white"%>
+            <%#= link_to "Add to cart", cart_products_path(@product), class: "btn btn-danger text-white"%>
+            <% if user_signed_in? %>
+              <form action="/cart_products" method="POST" data-turbo="false">
+                <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                <%= hidden_field_tag :product_id, @product.id %>
+                <input type="submit" value="Agregar al carro">
+              </form>
+            <% else %>
+              <%= link_to "Sign in to Add to Cart", new_user_session_path, class: "btn btn-primary" %>
+            <% end %>
           </div>
       </div>
     <hr class="my-2">

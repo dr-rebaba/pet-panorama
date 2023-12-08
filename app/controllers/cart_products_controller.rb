@@ -2,8 +2,9 @@ class CartProductsController < ApplicationController
   before_action :authenticate_user!
 
   def create
+
     @product = Product.find(params[:product_id])
-    @cart = current_user.cart
+    @cart = current_user.cart || current_user.create_cart
     @cart_product = @cart.cart_products.find_or_initialize_by(product: @product)
 
     if @cart_product.new_record?
@@ -13,7 +14,7 @@ class CartProductsController < ApplicationController
     end
 
     if @cart_product.save
-      redirect_to cart_path, notice: 'El producto se añadió a tu carrito correctamente.'
+      redirect_to product_path(@product), notice: 'El producto se añadió a tu carrito correctamente.'
     else
       render :new, status: :unprocessable_entity, alert: 'No se logró añadir el producto a tu carrito.'
     end
