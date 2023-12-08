@@ -1,2 +1,35 @@
 <h1>Cart#show</h1>
 <p>Find me in app/views/cart/show.html.erb</p>
+<h1>Carro de Compra</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Imagen</th>
+      <th>Producto</th>
+      <th>Precio Unitario</th>
+      <th>Cantidad</th>
+      <th>Subtotal</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cart_products.each do |cart_product| %>
+      <tr>
+        <td>
+          <% if cart_product.product.photo.attached? %>
+            <%= image_tag cart_product.product.photo, class: "product-image", style: "width: 100px;" %>
+          <% else %>
+            <p>No hay imagen disponible</p>
+          <% end %>
+        </td>
+        <td><%= cart_product.product.title %></td>
+        <td><%= number_to_currency(cart_product.price) %></td>
+        <td><%= cart_product.quantity %></td>
+        <td><%= number_to_currency(cart_product.quantity * cart_product.price) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>Total a pagar: <%= number_to_currency(@total_due) %></p>
