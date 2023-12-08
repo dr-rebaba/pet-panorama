@@ -68,7 +68,8 @@
 </div>
 
 <div class="container">
-  <h3>Create a Product</h3>
-  <%= link_to "Add a Product", new_product_path, class: "btn btn-primary rounded mb-3" %>
-</div>
+  <% if user_signed_in? %>
+    <h3>Create a Product</h3>
+    <%= link_to "Add a Product", new_product_path, class: "btn btn-primary rounded mb-3" %>
+  <% end %>
 </div>
