@@ -1,12 +1,30 @@
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <div class="container-fluid shadow p-2 mb-2 bg-white rounded">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag asset_path("pet_panorama_logo6.png"), alt: "Logo", class: "img-fluid" %>
     <% end %>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="row justify-content-center">
+    <div class="col-sm-8 my-3">
+      <%= form_with url: products_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control col-8",
+              placeholder: "Type a product"
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-secondary"  %>
+      <% end %>
+    </div>
+  </div>
+
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
@@ -17,9 +35,11 @@
           <li class="nav-item">
             <%= link_to "Products", products_index_path, class: "nav-link" %>
           </li>
-          <li class="nav-item"-->
+          <% if !user_signed_in? %>
+          <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li-->
+          </li>
+           <% end %>
           <li class="nav-item dropdown">
             <% if current_user.photo.attached?%>
               <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -27,8 +47,7 @@
               <%= image_tag "empty_user.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to link_to "Perfil de usuario", "/users/#{current_user.id}", class: "dropdown-item" %>
+              <%= link_to link_to "User Profile", "/users/#{current_user.id}", class: "dropdown-item" %>
               <%= link_to "Log out",  destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>

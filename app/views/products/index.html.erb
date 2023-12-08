@@ -1,3 +1,4 @@
+
 <div class="container mt-3 position-relative">
   <div class="row">
     <div class="col-12">
@@ -25,7 +26,7 @@
 <div class="container">
   <div class="row d-flex justify-content-center mt-3">
     <% @products.each do |product| %>
-      <div class="col-3 mx-3 my-3 shadow p-3 mb-5 bg-white rounded card-hover d-flex flex-column">
+      <div class="col-3 mx-3 my-3 shadow p-3 mb-5 rounded card-hover d-flex flex-column">
         <div class="flex-grow-1">
           <div class="d-flex justify-content-center ms-3">
             <% if product.photo.present? && product.photo.key.present? %>
@@ -69,4 +70,5 @@
 <div class="container">
   <h3>Create a Product</h3>
   <%= link_to "Add a Product", new_product_path, class: "btn btn-primary rounded mb-3" %>
+</div>
 </div>
