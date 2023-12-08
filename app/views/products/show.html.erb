@@ -37,12 +37,15 @@
               <form action="/cart_products" method="POST" data-turbo="false">
                 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
                 <%= hidden_field_tag :product_id, @product.id %>
-                <input type="submit" value="Agregar al carro">
+                <input type="submit" value="Add to cart", class= "btn btn-danger text-white">
               </form>
             <% else %>
               <%= link_to "Sign in to Add to Cart", new_user_session_path, class: "btn btn-primary" %>
             <% end %>
           </div>
+      </div>
+      <div>
+            <%= link_to "Return to products", products_path %>
       </div>
     <hr class="my-2">
 
