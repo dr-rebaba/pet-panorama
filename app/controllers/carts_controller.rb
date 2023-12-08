@@ -2,7 +2,7 @@ class CartsController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @cart = current_user.cart
+    @cart = current_user.cart || current_user.create_cart
     @cart_products = @cart.cart_products.includes(:product)
     @total_due = calculate_total_due(@cart_products)
   end
