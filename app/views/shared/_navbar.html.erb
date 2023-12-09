@@ -43,7 +43,7 @@
               <%= image_tag "empty_user.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Carro de compra", "/carts/:id", class: "dropdown-item" %>
+              <%= link_to "Orders", "/orders", class: "dropdown-item" %>
               <%= link_to link_to "Perfil de usuario", "/users/#{current_user.id}", class: "dropdown-item" %>
               <%= link_to "Log out",  destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
