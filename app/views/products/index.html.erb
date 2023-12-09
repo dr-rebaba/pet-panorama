@@ -24,6 +24,13 @@
 </div>
 
 <div class="container">
+  <% if user_signed_in? %>
+    <h3>Create a Product</h3>
+    <%= link_to "Add a Product", new_product_path, class: "btn btn-primary rounded mb-3" %>
+  <% end %>
+</div>
+
+<div class="container">
     <%= link_to "Return Home", root_path, class: "btn btn-outline-secondary btn-sm" %>
 </div>
 
@@ -79,11 +86,4 @@
       </div>
     <% end %>
   </div>
-</div>
-
-<div class="container">
-  <% if user_signed_in? %>
-    <h3>Create a Product</h3>
-    <%= link_to "Add a Product", new_product_path, class: "btn btn-primary rounded mb-3" %>
-  <% end %>
 </div>
