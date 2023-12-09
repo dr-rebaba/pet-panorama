@@ -56,6 +56,11 @@ product1.photo.attach(io: file, filename: "shampoo.png", content_type: "image/pn
 product1.save
 puts "El producto #{product1.title} se a creado correctamente"
 
+Review.create(rating: 5, comment: "This shampoo is the best for cats", product_id: product1.id)
+Review.create(rating: 4, comment: "Good product. But it should last more", product_id: product1.id)
+
+puts "Las reviews para el producto #{product1.title} se han creado correctamente"
+
 product2 = Product.new(
   title: 'Furhaven Large Dog Bed Trail Pup Travel',
   description: 'Alfombrilla de viaje plegable para perro es plegable y viene con una bolsa separada para portabilidad y fácil almacenamiento, por lo que es una opción ideal para viajes, senderismo, camping, picnics y otras actividades al aire libre',
@@ -68,6 +73,11 @@ file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534930/f
 product2.photo.attach(io: file, filename: "bed.png", content_type: "image/png")
 product2.save
 puts "El producto #{product2.title} se a creado correctamente"
+
+Review.create(rating: 5, comment: "My dog adores this furhaven", product_id: product2.id)
+Review.create(rating: 5, comment: "The material of this product is top class", product_id: product2.id)
+
+puts "Las reviews para el producto #{product2.title} se han creado correctamente"
 
 product3 = Product.new(
   title: 'Juguetes para perro, 12 piezas',
@@ -82,6 +92,11 @@ product3.photo.attach(io: file, filename: "juguete.png", content_type: "image/pn
 product3.save
 puts "El producto #{product3.title} se a creado correctamente"
 
+Review.create(rating: 5, comment: "It does not harm my dogs teeth", product_id: product3.id)
+Review.create(rating: 5, comment: "My dog plays with this product everyday", product_id: product3.id)
+
+puts "Las reviews para el producto #{product3.title} se han creado correctamente"
+
 product4 = Product.new(
   title: 'Pelotas De Goma para Mascotas 3 Pack',
   description: 'Limpiar y Afilar Los Dientes De Las Mascotas, ZZBIFRJ Juguetes para Perro Resistentes a Los Mordiscos Adecuados para El Adiestramiento De Perros Pequeños y Grandes',
@@ -94,6 +109,11 @@ file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534929/P
 product4.photo.attach(io: file, filename: "pelota.png", content_type: "image/png")
 product4.save
 puts "El producto #{product4.title} se a creado correctamente"
+
+Review.create(rating: 5, comment: "I love tne color. My pet does, too", product_id: product4.id)
+Review.create(rating: 4, comment: "The product is good, but it should be cheaper", product_id: product4.id)
+
+puts "Las reviews para el producto #{product4.title} se han creado correctamente"
 
 product5 = Product.new(
   title: 'Whiskas',
@@ -108,6 +128,11 @@ product5.photo.attach(io: file, filename: "wiskas.png", content_type: "image/png
 product5.save
 puts "El producto #{product5.title} se a creado correctamente"
 
+Review.create(rating: 5, comment: "The best price of the market", product_id: product5.id)
+Review.create(rating: 5, comment: "My cat is addicted to whiskas!", product_id: product5.id)
+
+puts "Las reviews para el producto #{product5.title} se han creado correctamente"
+
 product6 = Product.new(
   title: 'YOMYM Juguetes para Gatos2',
   description: 'Bola de Gato Interactiva Inteligente, 360 Grados Autogiratoria Juguete para Gatos, con Type C Recargable y Carcasa de Silicona Suave (Verde)',
@@ -120,6 +145,11 @@ file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534928/Y
 product6.photo.attach(io: file, filename: "wiskas.png", content_type: "image/png")
 product6.save
 puts "El producto #{product6.title} se a creado correctamente"
+
+Review.create(rating: 5, comment: "My cats love this toy", product_id: product6.id)
+Review.create(rating: 5, comment: "This is the best entertainment for my cats", product_id: product6.id)
+
+puts "Las reviews para el producto #{product6.title} se han creado correctamente"
 
 product7 = Product.new(
   title: 'New World - Caja plegable de metal para perros',
@@ -134,6 +164,12 @@ product7.photo.attach(io: file, filename: "caja_plgable.png", content_type: "ima
 product7.save
 puts "El producto #{product7.title} se a creado correctamente"
 
+Review.create(rating: 5, comment: "My dog loves this box", product_id: product7.id)
+Review.create(rating: 5, comment: "I will buy many boxes for my friends", product_id: product7.id)
+
+puts "Las reviews para el producto #{product7.title} se han creado correctamente"
+
+
 product8 = Product.new(
   title: 'AFujia Transportín Perro Gato ',
   description: 'Bolsa Transporte Transpirable para Mascotas, Portador de Viaje con Correa de Hombro Ajustable, Transporte de Gato con Colchón Suave+Tazón-Color Negro-Talla S',
@@ -146,6 +182,11 @@ file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534928/A
 product8.photo.attach(io: file, filename: "bolsa.png", content_type: "image/png")
 product8.save
 puts "El producto #{product8.title} se a creado correctamente"
+
+Review.create(rating: 5, comment: "I use this in every trip", product_id: product8.id)
+Review.create(rating: 5, comment: "My cat is calm with this product", product_id: product8.id)
+
+puts "Las reviews para el producto #{product8.title} se han creado correctamente"
 
 product9 = Product.new(
   title: 'Paquete de 2 juguetes grandes para masticar pájaros',
@@ -160,6 +201,11 @@ product9.photo.attach(io: file, filename: "juguetes2.png", content_type: "image/
 product9.save
 puts "El producto #{product9.title} se a creado correctamente"
 
+Review.create(rating: 5, comment: "My birds love this product", product_id: product9.id)
+Review.create(rating: 5, comment: "This product is durable", product_id: product9.id)
+
+puts "Las reviews para el producto #{product9.title} se han creado correctamente"
+
 product10 = Product.new(
   title: 'Correa para perro',
   description: 'Duradera y antideslizante de 4.4 pies, cómoda cuerda fuerte, correa antideslizante para perros grandes, medianos y pequeños, correa de entrenamiento para mascotas sin tirones, color rojo',
@@ -172,6 +218,11 @@ file = URI.open("https://res.cloudinary.com/dyx9c9mym/image/upload/v1701534927/C
 product10.photo.attach(io: file, filename: "correa.png", content_type: "image/png")
 product10.save
 puts "El producto #{product10.title} se a creado correctamente"
+
+Review.create(rating: 5, comment: "The quality of the belt is great", product_id: product10.id)
+Review.create(rating: 5, comment: "This product is durable", product_id: product10.id)
+
+puts "Las reviews para el producto #{product10.title} se han creado correctamente"
 
 product11 = Product.new(
   title: 'Foam de limpieza en seco Gato Consentido 150ml',
@@ -186,6 +237,11 @@ product11.photo.attach(io: file, filename: "foam.png", content_type: "image/png"
 product11.save
 puts "El producto #{product11.title} se a creado correctamente"
 
+Review.create(rating: 5, comment: "My cat is perfectly clean with this product", product_id: product11.id)
+Review.create(rating: 5, comment: "The smell of this kit is great", product_id: product11.id)
+
+puts "Las reviews para el producto #{product11.title} se han creado correctamente"
+
 product12 = Product.new(
   title: '10 PCS Paquete de Rascadores para Gatos',
   description: 'Nuestro protector de sofá contra arañazos de gatos se puede usar en cualquier lugar donde su gato pueda arañar. Este fuerte protector contra arañazos no solo es adecuado para sofás, sino también para cortinas, puertas, mesas, pisos y más. El protector de sofá para arañazos de gatos le sirve no solo para gatos, sino también a otras mascotas como los perros.',
@@ -199,11 +255,13 @@ product12.photo.attach(io: file, filename: "rascador.png", content_type: "image/
 product12.save
 puts "El producto #{product12.title} se a creado correctamente"
 
+Review.create(rating: 5, comment: "My cat loves to scratch this", product_id: product12.id)
+Review.create(rating: 5, comment: "I use this product and my cat does not damage my furtniture", product_id: product12.id)
+
+puts "Las reviews para el producto #{product12.title} se han creado correctamente"
+
 # Orders
 
-# Order.create(status: 1, date: Date.new(2023, 11, 25), user_id: 3)
-# Order.create(status: 2, date: Date.new(2023, 8, 13), user_id: 2)
-# Order.create(status: 3, date: Date.new(2023, 11, 15), user_id: 3)
-# Order.create(status: 1, date: Date.new(2023, 11, 3), user_id: 3)
-# Order.create(status: 2, date: Date.new(2023, 10, 28), user_id: 3)
-# Order.create(status: 3, date: Date.new(2023, 11, 30), user_id: 2)
+order1 = Order.create(user: user1, status: 'completed', date: Date.today)
+OrderProduct.create(order: order1, product: product1, quantity: 2, price: product1.price)
+OrderProduct.create(order: order1, product: product2, quantity: 1, price: product2.price)
