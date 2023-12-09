@@ -33,12 +33,14 @@
       <div class="d-flex justify-content-between my-3">
           <div>
             <%#= link_to "Add to cart", cart_products_path(@product), class: "btn btn-danger text-white"%>
-            <% if user_signed_in? %>
+            <% if user_signed_in?%>
+              <% if current_user.id != @product.user_id %>
               <form action="/cart_products" method="POST" data-turbo="false">
                 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
                 <%= hidden_field_tag :product_id, @product.id %>
                 <input type="submit" value="Add to cart", class= "btn btn-danger text-white">
               </form>
+              <% end  %>
             <% else %>
               <%= link_to "Sign in to Add to Cart", new_user_session_path, class: "btn btn-primary" %>
             <% end %>
@@ -68,11 +70,13 @@
       </div>
       <div class="col-12 col-sm-6">
         <div class="bg-white rounded p-3">
-          <h5>Add your review</h5>
-          <%= simple_form_for [@product, @review] do |f| %>
-            <%= f.input :comment, placeholder: "Add your review here..." %>
-            <%= f.input :rating, as: :select, collection: (1..5), required: true, label: false, input_html: { data: { controller: "star-rating" } } %>
-            <%= f.submit class: "btn btn-primary mt-2" %>
+          <% if !current_user %>
+              <h5>Add your review</h5>
+              <%= simple_form_for [@product, @review] do |f| %>
+                <%= f.input :comment, placeholder: "Add your review here..." %>
+                <%= f.input :rating, as: :select, collection: (1..5), required: true, label: false, input_html: { data: { controller: "star-rating" } } %>
+                <%= f.submit class: "btn btn-primary mt-2" %>
+              <% end %>
           <% end %>
         </div>
       </div>
