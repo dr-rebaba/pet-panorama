@@ -16,7 +16,10 @@ Rails.application.routes.draw do
   get 'products/update'
   get 'products/destroy'
 
-  get 'profile', to: 'users#show', as: 'user_profile'
+  get 'profile', to: 'users#show', as: :user_profile
+
+  post 'update_product', to: 'carts#update_product', as: :update_product
+  delete 'remove', to: 'carts#remove', as: :remove_product
 
   devise_for :users
   root to: "pages#home"
@@ -36,5 +39,5 @@ Rails.application.routes.draw do
   resources :orders, only: [:create, :show, :index]
   resources :order_products, only: [:create, :destroy]
 
-  
+
 end
