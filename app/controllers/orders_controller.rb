@@ -24,6 +24,8 @@ class OrdersController < ApplicationController
     @total_due = calculate_total_due(@order_products)
   end
 
+  helper_method :display_order_status
+
   private
 
   def calculate_total_due(order_products)
@@ -38,6 +40,17 @@ class OrdersController < ApplicationController
         quantity: cart_product.quantity,
         price: cart_product.price
       )
+    end
+  end
+
+  def display_order_status(status)
+    case status
+    when 0
+      'Pending'
+    when 1
+      'Delivered'
+    else
+      'Unknown Status'
     end
   end
 end

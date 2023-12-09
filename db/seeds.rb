@@ -201,9 +201,6 @@ puts "El producto #{product12.title} se a creado correctamente"
 
 # Orders
 
-# Order.create(status: 1, date: Date.new(2023, 11, 25), user_id: 3)
-# Order.create(status: 2, date: Date.new(2023, 8, 13), user_id: 2)
-# Order.create(status: 3, date: Date.new(2023, 11, 15), user_id: 3)
-# Order.create(status: 1, date: Date.new(2023, 11, 3), user_id: 3)
-# Order.create(status: 2, date: Date.new(2023, 10, 28), user_id: 3)
-# Order.create(status: 3, date: Date.new(2023, 11, 30), user_id: 2)
+order1 = Order.create(user: user1, status: 'completed', date: Date.today)
+OrderProduct.create(order: order1, product: product1, quantity: 2, price: product1.price)
+OrderProduct.create(order: order1, product: product2, quantity: 1, price: product2.price)
