@@ -9,8 +9,8 @@
           Perfil de Usuario
         </div>
         <div class="card-body">
-          <% if @user.photo.attached? %>
-            <%= image_tag @user.photo, class: 'card-img-top img-fluid  d-block' 'reduced-image'%>
+          <% if current_user.photo.attached? %>
+            <%= image_tag current_user.photo, class: 'card-img-top img-fluid  d-block' 'reduced-image'%>
           <% end %>
           <h5 class="card-title"><%= @user.name %> <%= @user.last_name %></h5>
           <p class="card-text">

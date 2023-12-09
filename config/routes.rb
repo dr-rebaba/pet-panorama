@@ -35,4 +35,6 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:create, :show, :index]
   resources :order_products, only: [:create, :destroy]
+
+  
 end

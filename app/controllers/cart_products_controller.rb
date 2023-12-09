@@ -14,7 +14,7 @@ class CartProductsController < ApplicationController
     end
 
     if @cart_product.save
-      redirect_to product_path(@product), notice: 'El producto se añadió a tu carrito correctamente.'
+      redirect_to cart_path(@cart), notice: 'El producto se añadió a tu carrito correctamente.'
     else
       render :new, status: :unprocessable_entity, alert: 'No se logró añadir el producto a tu carrito.'
     end
