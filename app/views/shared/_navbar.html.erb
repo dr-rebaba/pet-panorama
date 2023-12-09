@@ -1,5 +1,5 @@
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid shadow p-2 mb-2 bg-white rounded">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag asset_path("pet_panorama_logo6.png"), alt: "Logo", class: "img-fluid" %>
@@ -35,7 +35,9 @@
           <li class="nav-item">
             <%= link_to "Products", products_index_path, class: "nav-link" %>
           </li>
-
+          <li class="nav-item">
+            <%= link_to "Carro de Compra", "/carts/:id", class: "nav-link" %>
+          </li>
           <li class="nav-item dropdown">
             <% if current_user.photo.attached?%>
               <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -43,7 +45,6 @@
               <%= image_tag "empty_user.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Carro de compra", "/carts/:id", class: "dropdown-item" %>
               <%= link_to link_to "Perfil de usuario", "/users/#{current_user.id}", class: "dropdown-item" %>
               <%= link_to "Log out",  destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
