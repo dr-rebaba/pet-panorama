@@ -7,14 +7,18 @@ class OrdersController < ApplicationController
 
   def create
     @cart = current_user.cart
-    @order = Order.new(user: current_user, status: 'pending', date: Date.today)
-
-    if @order.save
-      create_order_products(@order, @cart.cart_products)
-      @cart.destroy
-      redirect_to order_path(@order), notice: 'Order placed successfully.'
+    if current_user.cart.cart_products.empty?
+      flash[:alert] = "Cannot place an order with an empty cart."
+      redirect_to cart_path(@cart)
     else
-      redirect_to cart_path, alert: 'Unable to place the order.'
+      @order = Order.new(user: current_user, status: 'pending', date: Date.today)
+      if @order.save
+        create_order_products(@order, @cart.cart_products)
+        @cart.destroy
+        redirect_to order_path(@order), notice: 'Order placed successfully.'
+      else
+        redirect_to cart_path, alert: 'Unable to place the order.'
+      end
     end
   end
 
@@ -24,7 +28,7 @@ class OrdersController < ApplicationController
     @total_due = calculate_total_due(@order_products)
   end
 
-  helper_method :display_order_status
+  helper_method :display_order_status, :display_order_status_class
 
   private
 
@@ -52,5 +56,22 @@ class OrdersController < ApplicationController
     else
       'Unknown Status'
     end
+  end
+end
+
+def display_order_status_class(status)
+  case status
+  when 'pending'
+    'table-warning'
+  when 'processed'
+    'table-success'
+  when 'shipped'
+    'table-primary'
+  when 'delivered'
+    'table-info'
+  when 'cancelled'
+    'table-danger'
+  else
+    'table-light'
   end
 end
