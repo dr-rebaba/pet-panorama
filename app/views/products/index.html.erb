@@ -24,6 +24,17 @@
 </div>
 
 <div class="container">
+  <% if user_signed_in? %>
+    <h3>Create a Product</h3>
+    <%= link_to "Add a Product", new_product_path, class: "btn btn-primary rounded mb-3" %>
+  <% end %>
+</div>
+
+<div class="container">
+    <%= link_to "Return Home", root_path %>
+</div>
+
+<div class="container">
   <div class="row d-flex justify-content-center mt-3">
     <% @products.each do |product| %>
       <div class="col-3 mx-3 my-3 shadow p-3 mb-5 rounded card-hover d-flex flex-column">
@@ -65,15 +76,4 @@
       </div>
     <% end %>
   </div>
-</div>
-
-<div class="container">
-  <% if user_signed_in? %>
-    <h3>Create a Product</h3>
-    <%= link_to "Add a Product", new_product_path, class: "btn btn-primary rounded mb-3" %>
-  <% end %>
-</div>
-
-<div class="container">
-    <%= link_to "Return Home", root_path %>
 </div>
