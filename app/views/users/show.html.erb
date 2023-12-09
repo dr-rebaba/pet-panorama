@@ -1,12 +1,11 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
 <!-- views/users/show.html.erb -->
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
       <div class="card">
         <div class="card-header">
-          Perfil de Usuario
+          User Profile
         </div>
         <div class="card-body">
           <% if current_user.photo.attached? %>
@@ -18,15 +17,15 @@
             <%= @user.email %>
           </p>
           <p class="card-text">
-            <strong>Teléfono:</strong>
+            <strong>Phone number:</strong>
             <%= @user.phone_number %>
           </p>
           <p class="card-text">
           </p>
         </div>
         <div class="card-footer text-muted">
-          <%= link_to 'Editar Perfil', edit_user_path(@user), class: 'btn btn-outline-primary' %>
-          <%= link_to 'Eliminar Cuenta', user_path(@user), method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn btn-outline-danger' %>
+          <%= link_to 'Edit profile', edit_user_path(@user), class: 'btn btn-outline-primary' %>
+          <%= link_to 'Delete account', user_path(@user), method: :delete, data: { confirm: '¿Are you sure?' }, class: 'btn btn-outline-danger' %>
         </div>
       </div>
     </div>
